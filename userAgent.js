@@ -7,14 +7,14 @@ function userAgent(){
     }
     if(M[1]=== 'Chrome'){
         tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
-        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera').split(' ');
     }
     M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
     if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
     return M;
 }
 
-if (userAgent()[0] == 'firefox') {
+if (userAgent()[0] == 'Firefox') {
 
     if (userAgent()[1] < '35') {
 
@@ -34,9 +34,19 @@ if (userAgent()[0] == 'Opera') {
 
 }
 
-if ((userAgent()[0] == 'safari') {
+if ((userAgent()[0] == 'Safari') {
 
     if (userAgent()[1] == '5.0') {
+
+        alert('Ваш браузер устарел, пожалуйста обновите его').modal('show');
+
+    }
+
+}
+
+if ((userAgent()[0] == 'IE') {
+
+    if (userAgent()[1] < '9') {
 
         alert('Ваш браузер устарел, пожалуйста обновите его').modal('show');
 
