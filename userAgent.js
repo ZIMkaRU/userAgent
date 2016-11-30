@@ -34,7 +34,7 @@ if (userAgent()[0] == 'Opera') {
 
 }
 
-if ((userAgent()[0] == 'Safari') {
+if (userAgent()[0] == 'Safari') {
 
     if (userAgent()[1] == '5.0') {
 
@@ -44,7 +44,7 @@ if ((userAgent()[0] == 'Safari') {
 
 }
 
-if ((userAgent()[0] == 'IE') {
+if (userAgent()[0] == 'IE' || userAgent()[0] == 'MSIE') {
 
     if (userAgent()[1] < '9') {
 
