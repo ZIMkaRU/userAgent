@@ -11,10 +11,11 @@ function userAgent(){
     }
     M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
     if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+    M[0] = M[0].toLowerCase();
     return M;
 }
 
-if (userAgent()[0] == 'Firefox') {
+if (userAgent()[0] == 'firefox') {
 
     if (userAgent()[1] < '35') {
 
@@ -24,7 +25,7 @@ if (userAgent()[0] == 'Firefox') {
 
 }
 
-if (userAgent()[0] == 'Opera') {
+if (userAgent()[0] == 'opera') {
 
     if (userAgent()[1] < '7') {
 
@@ -34,7 +35,7 @@ if (userAgent()[0] == 'Opera') {
 
 }
 
-if (userAgent()[0] == 'Safari') {
+if (userAgent()[0] == 'safari') {
 
     if (userAgent()[1] == '5.0') {
 
@@ -44,7 +45,7 @@ if (userAgent()[0] == 'Safari') {
 
 }
 
-if (userAgent()[0] == 'IE' || userAgent()[0] == 'MSIE') {
+if (userAgent()[0] == 'msie') {
 
     if (userAgent()[1] < '9') {
 
